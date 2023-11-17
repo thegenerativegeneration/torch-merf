@@ -56,7 +56,7 @@ python scripts/colmap2nerf.py --images ./data/custom/images/ --run_colmap # if u
 First time running will take some time to compile the CUDA extensions.
 ```bash
 ln -s $CONDA_PREFIX/lib $CONDA_PREFIX/lib64 # fix torch/conda lib64 issue. Torch cpp extension will look for lib64, but conda only has lib.
-export $CUDA_HOME=$CONDA_PREFIX # fix conda cuda issue, maybe not necessary
+export CUDA_HOME=$CONDA_PREFIX # fix conda cuda issue, maybe not necessary
 ```
 
 ```bash
