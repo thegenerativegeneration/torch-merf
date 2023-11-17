@@ -37,8 +37,7 @@ pip install . # install to python path (you still need the raymarching/ folder, 
 ```
 
 ### Tested environments
-* -Ubuntu 22 with torch 1.12 & CUDA 11.6 on a V100.- (not working)
-* Instead: Ubuntu 22 with torch 1.13 & CUDA 11.6.
+* Ubuntu 22 with torch 1.13 or 2.0 & CUDA 11.6 or 11.7 with RTX 3090.
 
 # Usage
 
