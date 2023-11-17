@@ -10,6 +10,8 @@ We support **exporting almost lossless baked assets for real-time webGL renderin
 
 # Install
 
+
+
 ```bash
 git clone https://github.com/ashawkey/torch-merf.git
 cd torch-merf
@@ -35,7 +37,8 @@ pip install . # install to python path (you still need the raymarching/ folder, 
 ```
 
 ### Tested environments
-* Ubuntu 22 with torch 1.12 & CUDA 11.6 on a V100.
+* -Ubuntu 22 with torch 1.12 & CUDA 11.6 on a V100.- (not working)
+* Instead: Ubuntu 22 with torch 1.13 & CUDA 11.6.
 
 # Usage
 
@@ -51,6 +54,11 @@ python scripts/colmap2nerf.py --images ./data/custom/images/ --run_colmap # if u
 
 ### Basics
 First time running will take some time to compile the CUDA extensions.
+```bash
+ln -s $CONDA_PREFIX/lib $CONDA_PREFIX/lib64 # fix torch/conda lib64 issue. Torch cpp extension will look for lib64, but conda only has lib.
+export $CUDA_HOME=$CONDA_PREFIX # fix conda cuda issue, maybe not necessary
+```
+
 ```bash
 ## train
 # mip-nerf 360
