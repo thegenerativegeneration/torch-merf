@@ -1,4 +1,4 @@
-name: torch-merf2
+name: torch-merf
 channels:
   - defaults
   - conda-forge
